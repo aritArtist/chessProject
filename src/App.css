@@ -1,3 +1,28 @@
+
+#container table {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+
+#container table tr td{
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  margin: 0;
+}
+
+#container table tr:nth-child(even) td:nth-child(even){
+  background: black;
+}
+#container table tr:nth-child(odd) td:nth-child(odd){
+  background: black;
+}
+
+
+
+
 .App {
   text-align: center;
 }
