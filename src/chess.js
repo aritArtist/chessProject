@@ -3,6 +3,11 @@ window.addEventListener('load', (event) => {
     document.querySelector('.blindfold').value = "Blindfold chessboard"
 });
 
+function highlight(event){
+    event.target.classList.toggle('highlight')
+    event.stopPropagation();
+}
+
 function addHiddenClass(){
     const chessBoard = document.getElementById("container")
     chessBoard.classList.toggle("hidden");
