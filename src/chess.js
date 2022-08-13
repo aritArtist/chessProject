@@ -1,6 +1,18 @@
 window.addEventListener('load', (event) => {
     console.log('page is fully loaded');
+    document.querySelector('.blindfold').value = "Blindfold chessboard"
 });
+
+function addHiddenClass(){
+    const chessBoard = document.getElementById("container")
+    chessBoard.classList.toggle("hidden");
+
+    const button = document.querySelector('.blindfold')
+    if(chessBoard.classList.contains("hidden"))
+        button.value = "Back to Visible chessboard"
+    else
+        button.value = "Blindfold chessboard"
+}
 
 window.onload =(event) => {
 const container = document.getElementById("container");

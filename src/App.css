@@ -3,6 +3,9 @@
   border: 1px solid black;
   border-collapse: collapse;
 }
+#container.hidden {
+  opacity : 1%;
+}
 
 
 #container table tr td{
