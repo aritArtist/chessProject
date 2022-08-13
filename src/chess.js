@@ -39,5 +39,28 @@ const container = document.getElementById("container");
 
     innerHTML += '</table>'
     container.innerHTML = innerHTML
+    setUpPieces(container)
+}
+
+function setUpPieces(chessContainer){
+    //Setup pawns
+    chessContainer.querySelectorAll("tr:nth-child(2) td")
+        .forEach(e=>e.classList.add("white","p"))
+    chessContainer.querySelectorAll("tr:nth-child(7) td")
+        .forEach(e=>e.classList.add("black","p"))
+
+    //Rook
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(1)").classList.add("white","r");
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(8)").classList.add("white","r");
+
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(1)").classList.add("black","r");
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(8)").classList.add("black","r");
+
+    /*//Knight
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(1)").classList.add("white","r");
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(8)").classList.add("white","r");
+
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(1)").classList.add("black","r");
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(8)").classList.add("black","r");*/
 
 }
