@@ -32,7 +32,7 @@ const container = document.getElementById("container");
     for(  let row = 0; row < 8; row++) {
         innerHTML += '<tr>'
         for( let col = 0; col< 8; col++) {
-            innerHTML += '<td></td>'
+            innerHTML += '<td><div></div></td>'
         }
         innerHTML += '</tr>'
     };
@@ -44,17 +44,17 @@ const container = document.getElementById("container");
 
 function setUpPieces(chessContainer){
     //Setup pawns
-    chessContainer.querySelectorAll("tr:nth-child(2) td")
+    chessContainer.querySelectorAll("tr:nth-child(2) td div")
         .forEach(e=>e.classList.add("white","p"))
-    chessContainer.querySelectorAll("tr:nth-child(7) td")
+    chessContainer.querySelectorAll("tr:nth-child(7) td div")
         .forEach(e=>e.classList.add("black","p"))
 
     //Rook
-    chessContainer.querySelector("tr:nth-child(1) td:nth-child(1)").classList.add("white","r");
-    chessContainer.querySelector("tr:nth-child(1) td:nth-child(8)").classList.add("white","r");
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(1) div").classList.add("white","r");
+    chessContainer.querySelector("tr:nth-child(1) td:nth-child(8) div").classList.add("white","r");
 
-    chessContainer.querySelector("tr:nth-child(8) td:nth-child(1)").classList.add("black","r");
-    chessContainer.querySelector("tr:nth-child(8) td:nth-child(8)").classList.add("black","r");
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(1) div").classList.add("black","r");
+    chessContainer.querySelector("tr:nth-child(8) td:nth-child(8) div").classList.add("black","r");
 
     /*//Knight
     chessContainer.querySelector("tr:nth-child(1) td:nth-child(1)").classList.add("white","r");
